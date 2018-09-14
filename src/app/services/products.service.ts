@@ -23,4 +23,5 @@ export class ProductsService {
   public addProduct(product: IProduct): Observable<any> {
     return this._http.post(this.URL, product);
   }
+
 }

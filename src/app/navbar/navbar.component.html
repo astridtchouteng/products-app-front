@@ -28,8 +28,16 @@
               </a>
             </li>
             <li class="nav-item" *ngIf= isLoggedIn()>
-            <a class="nav-link" routerLink= '/logout'>Logout</a>
-          </li>
+               <a class="nav-link" routerLink= '/logout'>Logout</a>
+            </li>
+
+            <li class="nav-item" >
+              <a class="nav-link" routerLink= '/cart'> <i class="fa fa-shopping-cart" style="font-size:24px"></i></a>
+            </li>
+
+            <li class="nav-item" >
+              <a class="nav-link" [routerLink]="['/cart']"> <span class="badge badge-success">4 </span> </a>
+            </li>
 
      </ul>
   </div>

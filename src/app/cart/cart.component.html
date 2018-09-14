@@ -1,0 +1,35 @@
+<div class="card mt-3">
+  <div class="card-header text-white bg-secondary">
+   <h5> <i class="fa fa-shopping-cart" style="font-size:36px"></i> Contenu du panier </h5>
+  </div>
+
+   <div class="card-body offset-2 col-8">
+   <table class="table table-bordered table-striped">
+     <thead>
+       <tr >
+         <th class="w-75">Title</th>
+         <th class="w-25">Unit Price</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let p of cartproduct" >
+          <td scope="row"> {{p.name}} </td>
+         <td style="color:brown;"> <strong> {{p.unitPrice | currency:"EUR":"symbol"}} </strong></td>
+       </tr>
+
+
+     </tbody>
+     <tfoot>
+      <tr>
+        <td style="text-align:right;"> <strong>Total</strong></td>
+        <td style="color:brown; font-size: larger"> <strong> {{totalAmount | currency:"EUR":"symbol"}} </strong></td>
+      </tr>
+     </tfoot>
+   </table>
+  </div>
+  <div class="row">
+  <div class="offset-2 col-8">
+      <button type="button" class="btn btn-danger col-8 offset-1"  (click)="Commander()">Commander ! </button>
+  </div>
+</div>
+</div>
